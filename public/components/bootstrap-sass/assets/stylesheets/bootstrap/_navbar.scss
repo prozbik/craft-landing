@@ -424,6 +424,10 @@
       border-radius: 30px;
       transition: all 0.4s;
 
+      @media screen and (max-width: 768px) {
+        border-radius: 0;
+        text-align: center;
+      }
 
       &:hover,
       &:focus {

@@ -11,6 +11,9 @@
 @font-face {
   font-family: "Basic Sans Serif 7";
   src: url("../fonts/BasicSansSerif7/basic_sans_serif_7.ttf"); }
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf"); }
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -3987,6 +3990,10 @@ tbody.collapse.in {
     border: 1px solid transparent;
     border-radius: 30px;
     transition: all 0.4s; }
+    @media screen and (max-width: 768px) {
+      .navbar-default .navbar-nav > li > a {
+        border-radius: 0;
+        text-align: center; } }
     .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
       color: #5db442;
       background-color: transparent;
@@ -5831,15 +5838,28 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+button:focus, input:focus {
+  outline: none; }
+
 header {
   background-color: #282828;
   color: #fff;
   padding: 13px 0;
   font-family: "Roboto Light"; }
+  @media screen and (max-width: 769px) {
+    header {
+      text-align: center; } }
   header a {
     color: #fff; }
+  @media screen and (max-width: 769px) {
+    header span {
+      display: block;
+      text-align: center; } }
   header span:first-child {
     margin-right: 39px; }
+    @media screen and (max-width: 769px) {
+      header span:first-child {
+        margin-right: 15px; } }
   header span i {
     margin-right: 8px; }
 
@@ -5859,13 +5879,24 @@ nav {
   padding: 110px 0 70px 0;
   box-shadow: inset 0 5px 25px rgba(0, 0, 0, 0.5);
   color: #000; }
+  @media screen and (max-width: 768px) {
+    .slider {
+      padding: 25px 0 35px 0; } }
   .slider h1 {
     font-size: 48px; }
+    @media screen and (max-width: 768px) {
+      .slider h1 {
+        font-size: 35px; } }
   .slider p {
-    font-size: 16px; }
+    font-size: 16px;
+    margin-bottom: 50px; }
+    @media screen and (max-width: 768px) {
+      .slider p {
+        padding: 10px; } }
 
-.slider-img {
-  padding: 40px 0 80px 0; }
+@media screen and (max-width: 768px) {
+  #owl-example {
+    display: none; } }
 
 .subscribe input[name="email"] {
   padding: 10px 20px;
@@ -5888,6 +5919,9 @@ nav {
   font-family: "Roboto Light";
   background: url("../img/bg.jpg") repeat;
   padding: 110px; }
+  @media screen and (max-width: 991px) {
+    .community {
+      padding: 50px; } }
   .community h1 {
     font-size: 48px; }
   .community .wrapper {
@@ -5896,6 +5930,9 @@ nav {
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     margin-top: 48px; }
+    @media screen and (max-width: 991px) {
+      .community .wrapper {
+        padding: 35px 80px; } }
   .community .step > span {
     display: inline-block;
     vertical-align: middle; }
@@ -5947,8 +5984,42 @@ nav {
     font-size: 48px;
     font-family: "Roboto Light";
     text-align: center; }
+  .packages .package-toggle {
+    text-align: center;
+    font-size: 12px;
+    font-family: "Roboto Regular"; }
+    .packages .package-toggle a {
+      display: inline-block;
+      padding: 12px 22px;
+      border: 1px solid #ececec;
+      color: #333;
+      background-color: #fff;
+      position: relative; }
+      .packages .package-toggle a.active {
+        color: #fff;
+        background-color: #5db442; }
+      .packages .package-toggle a:first-of-type {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        margin-right: -2px; }
+        .packages .package-toggle a:first-of-type:after {
+          position: absolute;
+          content: 'OR';
+          display: inline-block;
+          padding: 10px;
+          border-radius: 30px;
+          font-size: 10px;
+          background: #4ca368;
+          color: #fff;
+          z-index: 999;
+          top: 4px;
+          right: -15px; }
+      .packages .package-toggle a:last-of-type {
+        margin-left: -2px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px; }
 
-.business-packages {
+#business-packages, #community-packages {
   margin-top: 50px; }
 
 .package {
@@ -6026,5 +6097,94 @@ nav {
     background-color: #5db442;
     color: #fff;
     text-decoration: none; }
+
+.advantages {
+  padding: 100px 0;
+  background: url("../img/bg.jpg") repeat; }
+  .advantages h1 {
+    font-size: 48px;
+    text-align: center;
+    font-family: "Roboto Light"; }
+  .advantages .advantage {
+    cursor: pointer;
+    text-align: center;
+    background-image: url("../img/bg.jpg");
+    margin-top: 25px; }
+    .advantages .advantage .advantage-wrapper {
+      padding: 40px 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s; }
+      .advantages .advantage .advantage-wrapper:hover {
+        background: #5db442;
+        color: #fff; }
+        .advantages .advantage .advantage-wrapper:hover:span.line {
+          background-color: #fff; }
+        .advantages .advantage .advantage-wrapper:hover i, .advantages .advantage .advantage-wrapper:hover p {
+          color: #fff; }
+    .advantages .advantage i {
+      color: #5db442; }
+    .advantages .advantage h4 {
+      font-family: "Roboto Regular";
+      text-transform: uppercase;
+      font-weight: bold; }
+    .advantages .advantage span.line {
+      display: block;
+      width: 40%;
+      height: 3px;
+      background-color: #ececec;
+      margin: 15px auto; }
+    .advantages .advantage p {
+      color: #808080; }
+
+.pre-footer {
+  padding: 50px 0;
+  background-color: #efefef; }
+  .pre-footer h4 {
+    font-family: "Roboto Regular";
+    font-size: 16px;
+    font-weight: bold; }
+  .pre-footer ul {
+    margin: 40px 0 0 0;
+    padding: 0; }
+    .pre-footer ul li {
+      list-style: none;
+      margin-top: 15px; }
+      .pre-footer ul li a {
+        color: #656565;
+        font-size: 13px;
+        font-family: "Roboto Light";
+        text-transform: uppercase; }
+  .pre-footer p {
+    margin-top: 40px;
+    font-family: "Roboto Light";
+    font-size: 12px; }
+  .pre-footer input[type="email"] {
+    padding: 15px 7px;
+    background-color: #fff;
+    border: none; }
+    @media screen and (max-width: 1199px) {
+      .pre-footer input[type="email"] {
+        width: 80%; } }
+  .pre-footer .sub {
+    display: inline-block;
+    padding: 15px 33px;
+    background-color: #5db442;
+    color: #fff;
+    margin-left: -4px;
+    margin-top: 23px; }
+    @media screen and (max-width: 1199px) {
+      .pre-footer .sub {
+        padding: 15px 17px; } }
+    .pre-footer .sub:hover {
+      text-decoration: none; }
+  @media screen and (max-width: 991px) {
+    .pre-footer div.col-sm-12 {
+      text-align: center; } }
+
+footer {
+  border-top: 1px solid #e7e7e7;
+  background-color: #5db442; }
+  footer .navbar-default .navbar-text, footer .navbar-default .navbar-link {
+    color: #777; }
 
 /*# sourceMappingURL=app.css.map */

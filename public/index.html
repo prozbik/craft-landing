@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="en">
     <meta charset="UTF-8">
     <title>Project name | Landing page # </title>
-    <link rel="stylesheet" href="/css/app.css"/>
+    <link rel="stylesheet" href="/css/app.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/owl/owl.carousel.css">
+    <link rel="stylesheet" href="/css/owl/owl.theme.css">
 </head>
-<body>
 
+<body>
 <header>
     <div class="container">
         <div class="row">
@@ -55,17 +58,19 @@
     <div class="wrapper">
         <h1>Bring your Big Data to Life With Craft Lance</h1>
         <p>Blue Lance transforms your company's data into rich visuals for you to collect and organize so you can focus
-        <br/>
-        on what matters to you. Stay in the know, spot trends as they happen, and push your business further.</p>
+            <br/> on what matters to you. Stay in the know, spot trends as they happen, and push your business further.</p>
 
-        <div class="slider-img">
-            <img src="http://placehold.it/600x400" alt="image # 1" class="img"/>
+        <div id="owl-example" class="owl-carousel">
+            <div><img src="http://placehold.it/800x400" alt=""></div>
+            <div><img src="http://placehold.it/800x400" alt=""></div>
+            <div><img src="http://placehold.it/800x400" alt=""></div>
+            <div><img src="http://placehold.it/800x400" alt=""></div>
         </div>
 
         <div class="subscribe">
-            <input type="email" name="email" id="email" placeholder="Enter your email address"/>
+            <input type="email" name="email" id="email" placeholder="Enter your email address" />
             <button>Use it free</button>
-            <p>By clicking Use it free, you agree to the  BlueLance Terms of Service.</p>
+            <p>By clicking Use it free, you agree to the BlueLance Terms of Service.</p>
         </div>
     </div>
 </section>
@@ -77,10 +82,34 @@
 
         <div class="wrapper">
             <!--step 1 -->
-            <div class="step">
+            <div class="step step1">
                 <span><i class="fa fa-sign-in fa-5x"></i></span>
-                <span>
-                    <h3>SIGNUP PROCESS</h3>
+          <span>
+              <h3>SIGNUP PROCESS</h3>
+              <ol>
+                  <li>User enters email address</li>
+                  <li>Clicks on "Sign up for free"</li>
+              </ol>
+          </span>
+            </div>
+            <!--end step 1-->
+            <!--step 1 -->
+            <div class="step step2" style="display: none;">
+                <span><i class="fa fa-spinner fa-5x"></i></span>
+          <span>
+              <h3>SIGNUP PROCESS 2</h3>
+              <ol>
+                  <li>User enters email address</li>
+                  <li>Clicks on "Sign up for free"</li>
+              </ol>
+          </span>
+            </div>
+            <!--end step 1-->
+            <!--step 1 -->
+            <div class="step step3" style="display: none;">
+                <span><i class="fa fa-sign-in fa-5x"></i></span>
+          <span>
+                    <h3>SIGNUP PROCESS 3</h3>
                     <ol>
                         <li>User enters email address</li>
                         <li>Clicks on "Sign up for free"</li>
@@ -88,20 +117,21 @@
                 </span>
             </div>
             <!--end step 1-->
+
         </div>
 
         <div class="row">
             <div class="step-tabs">
                 <ul>
-                    <li class="col-md-4 active">
+                    <li class="col-md-4 active" data-href="step1">
                         <span><i class="fa fa-sign-in fa-2x"></i></span>
                         <p>Community Edition</p>
                     </li>
-                    <li class="col-md-4">
+                    <li class="col-md-4" data-href="step2">
                         <span><i class="fa fa-spinner fa-2x"></i></span>
                         <p>Complete Signup Process</p>
                     </li>
-                    <li class="col-md-4">
+                    <li class="col-md-4" data-href="step3">
                         <span><i class="fa fa-check-square-o fa-2x"></i></span>
                         <p>Sign up</p>
                     </li>
@@ -117,21 +147,20 @@
         <div class="row">
             <h1>Affordable Services Package</h1>
 
-            <!--<ul class="tabs">-->
-                <!--<li class="active"><a href="#business">Business Edition</a></li>-->
-                <!--<li><a href="#community">Community Edition</a></li>-->
-            <!--</ul>-->
+            <div class="package-toggle">
+                <a href="#business-packages" class="active">Business Edition</a>
+                <a href="#community-packages">Community Edition</a>
+            </div>
 
-            <div class="business-packages">
-                    <div class="col-md-4">
-                        <div class="package">
+            <div id="business-packages">
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="package">
                         <div class="package-header">
                             <span class="line"></span>
                             <h4>BASIC</h4>
-                            <span class="price">
-                                <h3>$59 <small>per month</small></h3>
-
-                            </span>
+                <span class="price">
+                  <h3>$59 <small>per month</small></h3>
+                </span>
                         </div>
 
                         <ul class="package-desc">
@@ -142,58 +171,282 @@
                         </ul>
 
                         <a href="#" class="package-btn">Purchase</a>
-                         </div>
+                    </div>
                 </div>
-                    <div class="col-md-4">
-                        <div class="package active">
-                            <div class="package-header">
-                                <span class="line"></span>
-                                <h4>STANDARD</h4>
-                            <span class="price">
-                                <h3>$79 <small>per month</small></h3>
-
-                            </span>
-                            </div>
-
-                            <ul class="package-desc">
-                                <li><i class="fa fa-check"></i> 20 Keyword</li>
-                                <li><i class="fa fa-times"></i> No Time Tracking</li>
-                                <li><i class="fa fa-check"></i> 230 - Man Hour</li>
-                                <li><i class="fa fa-times"></i> News Letter Available</li>
-                            </ul>
-
-                            <a href="#" class="package-btn">Purchase</a>
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="package active">
+                        <div class="package-header">
+                            <span class="line"></span>
+                            <h4>STANDARD</h4>
+                  <span class="price">
+                    <h3>$79 <small>per month</small></h3>
+                  </span>
                         </div>
+
+                        <ul class="package-desc">
+                            <li><i class="fa fa-check"></i> 20 Keyword</li>
+                            <li><i class="fa fa-times"></i> No Time Tracking</li>
+                            <li><i class="fa fa-check"></i> 230 - Man Hour</li>
+                            <li><i class="fa fa-times"></i> News Letter Available</li>
+                        </ul>
+
+                        <a href="#" class="package-btn">Purchase</a>
                     </div>
-                    <div class="col-md-4">
-                        <div class="package">
-                            <div class="package-header">
-                                <span class="line"></span>
-                                <h4>UNLIMITED</h4>
-                            <span class="price">
-                                <h3>$99 <small>per month</small></h3>
-
-                            </span>
-                            </div>
-
-                            <ul class="package-desc">
-                                <li><i class="fa fa-check"></i> 20 Keyword</li>
-                                <li><i class="fa fa-times"></i> No Time Tracking</li>
-                                <li><i class="fa fa-check"></i> 230 - Man Hour</li>
-                                <li><i class="fa fa-times"></i> News Letter Available</li>
-                            </ul>
-
-                            <a href="#" class="package-btn">Purchase</a>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="package">
+                        <div class="package-header">
+                            <span class="line"></span>
+                            <h4>UNLIMITED</h4>
+                <span class="price">
+                  <h3>$99 <small>per month</small></h3>
+                </span>
                         </div>
+
+                        <ul class="package-desc">
+                            <li><i class="fa fa-check"></i> 20 Keyword</li>
+                            <li><i class="fa fa-times"></i> No Time Tracking</li>
+                            <li><i class="fa fa-check"></i> 230 - Man Hour</li>
+                            <li><i class="fa fa-times"></i> News Letter Available</li>
+                        </ul>
+
+                        <a href="#" class="package-btn">Purchase</a>
                     </div>
+                </div>
+            </div>
+
+            <div id="community-packages" style="display: none;">
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="package">
+                        <div class="package-header">
+                            <span class="line"></span>
+                            <h4>BASIC</h4>
+                  <span class="price">
+                    <h3>$19 <small>per month</small></h3>
+                  </span>
+                        </div>
+
+                        <ul class="package-desc">
+                            <li><i class="fa fa-check"></i> 20 Keyword</li>
+                            <li><i class="fa fa-times"></i> No Time Tracking</li>
+                            <li><i class="fa fa-check"></i> 230 - Man Hour</li>
+                            <li><i class="fa fa-times"></i> News Letter Available</li>
+                        </ul>
+
+                        <a href="#" class="package-btn">Purchase</a>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="package active">
+                        <div class="package-header">
+                            <span class="line"></span>
+                            <h4>STANDARD</h4>
+                <span class="price">
+                  <h3>$29 <small>per month</small></h3>
+                </span>
+                        </div>
+
+                        <ul class="package-desc">
+                            <li><i class="fa fa-check"></i> 20 Keyword</li>
+                            <li><i class="fa fa-times"></i> No Time Tracking</li>
+                            <li><i class="fa fa-check"></i> 230 - Man Hour</li>
+                            <li><i class="fa fa-times"></i> News Letter Available</li>
+                        </ul>
+
+                        <a href="#" class="package-btn">Purchase</a>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="package">
+                        <div class="package-header">
+                            <span class="line"></span>
+                            <h4>UNLIMITED</h4>
+                <span class="price">
+                  <h3>$39 <small>per month</small></h3>
+                </span>
+                        </div>
+
+                        <ul class="package-desc">
+                            <li><i class="fa fa-check"></i> 20 Keyword</li>
+                            <li><i class="fa fa-times"></i> No Time Tracking</li>
+                            <li><i class="fa fa-check"></i> 230 - Man Hour</li>
+                            <li><i class="fa fa-times"></i> News Letter Available</li>
+                        </ul>
+
+                        <a href="#" class="package-btn">Purchase</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+<section class="advantages">
+
+    <h1>
+        A Comprehensive Data Integration and <br/>
+        Business Analytics Platform
+    </h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3 advantage">
+                <div class="advantage-wrapper">
+                    <span><i class="fa fa-book fa-4x"></i></span>
+                    <span class="line"></span>
+                    <h4>Community Edition</h4>
+                    <p>
+                        Visually explore your data through a free-form drag-and-drop canvas, a broad range of modern data visualizations, and an easy-to-use report authoring experience.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3 advantage">
+                <div class="advantage-wrapper">
+                    <span><i class="fa fa-building fa-4x"></i></span>
+                    <span class="line"></span>
+                    <h4>Community Edition</h4>
+                    <p>
+                        Visually explore your data through a free-form drag-and-drop canvas, a broad range of modern data visualizations, and an easy-to-use report authoring experience.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3 advantage">
+                <div class="advantage-wrapper">
+                    <span><i class="fa fa-bullseye fa-4x"></i></span>
+                    <span class="line"></span>
+                    <h4>Community Edition</h4>
+                    <p>
+                        Visually explore your data through a free-form drag-and-drop canvas, a broad range of modern data visualizations, and an easy-to-use report authoring experience.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3 advantage">
+                <div class="advantage-wrapper">
+                    <span><i class="fa fa-bell-slash-o fa-4x"></i></span>
+                    <span class="line"></span>
+                    <h4>Community Edition</h4>
+                    <p>
+                        Visually explore your data through a free-form drag-and-drop canvas, a broad range of modern data visualizations, and an easy-to-use report authoring experience.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 advantage">
+                <div class="advantage-wrapper">
+                    <span><i class="fa fa-binoculars fa-4x"></i></span>
+                    <span class="line"></span>
+                    <h4>Community Edition</h4>
+                    <p>
+                        Visually explore your data through a free-form drag-and-drop canvas, a broad range of modern data visualizations, and an easy-to-use report authoring experience.
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3  advantage">
+                <div class="advantage-wrapper">
+                    <span><i class="fa fa-birthday-cake fa-4x"></i></span>
+                    <span class="line"></span>
+                    <h4>Community Edition</h4>
+                    <p>
+                        Visually explore your data through a free-form drag-and-drop canvas, a broad range of modern data visualizations, and an easy-to-use report authoring experience.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 advantage">
+                <div class="advantage-wrapper">
+                    <span><i class="fa fa-crop fa-4x"></i></span>
+                    <span class="line"></span>
+                    <h4>Community Edition</h4>
+                    <p>
+                        Visually explore your data through a free-form drag-and-drop canvas, a broad range of modern data visualizations, and an easy-to-use report authoring experience.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 advantage">
+                <div class="advantage-wrapper">
+                    <span><i class="fa fa-diamond fa-4x"></i></span>
+                    <span class="line"></span>
+                    <h4>Community Edition</h4>
+                    <p>
+                        Visually explore your data through a free-form drag-and-drop canvas, a broad range of modern data visualizations, and an easy-to-use report authoring experience.
+                    </p>
+                </div>
             </div>
 
         </div>
     </div>
 </section>
 
+
+
+<div class="pre-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-3 col-lg-3">
+                <h4>Newsletter</h4>
+                <p>Insights await in your company's data. Bring them into focus with BlueLance.</p>
+                <input type="email" placeholder="enter your email"> <a href="#" class="sub"> &gt; </a>
+            </div>
+
+            <div class="col-sm-12 col-md-3 col-lg-3">
+                <h4>Quck Links</h4>
+                <ul>
+                    <li><a href="#">POWER BI DESKTOP</a></li>
+                    <li><a href="#">MOBILE</a></li>
+                    <li><a href="#">SEE ALL DOWNLOADS</a></li>
+                    <li><a href="#">POWER BI DESKTOP</a></li>
+                    <li><a href="#">MOBILE</a></li>
+                    <li><a href="#">SEE ALL DOWNLOADS</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-12 col-md-3 col-lg-3">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">PRIVACY & COOKIES</a></li>
+                    <li><a href="#">TERMS OF USE</a></li>
+                    <li><a href="#">TRADEMARKS</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-12 col-md-3 col-lg-3">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="#">SUPPORT</a></li>
+                    <li><a href="#">DEVELOPERS</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">NEWSLETTER</a></li>
+                    <li><a href="#">PYRAMID ANALYTICS</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<footer>
+    <div class="nav navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">CARFT LANCE</a>
+            </div>
+            <p class="navbar-text navbar-right">&copy; Designed by [name], All Right Reserved.<a href="#" class="navbar-link">John Doe</a></p>
+        </div>
+    </div>
+</footer>
+
 <script src="/components/jquery/dist/jquery.min.js"></script>
 <script src="/components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
 <script src="/js/app.js"></script>
 </body>
+
 </html>
